@@ -1,0 +1,17 @@
+@import "../../../../assets/styles/variables.scss";
+.menu-item{
+  list-style: none;
+  &__link{
+    text-decoration: none;
+    color:$grayish-blue;
+    font-weight: $weights-small;
+    font-size: $small;
+    padding: 10px;
+    margin: 0 10px;
+    text-transform: capitalize;
+    &:hover{
+      cursor: pointer;
+      color: $dark-blue;
+    }
+  }
+}

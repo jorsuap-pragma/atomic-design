@@ -1,0 +1,10 @@
+<nav class="menu">
+  <div class="menu__icon" [ngClass]="{'closeIcon': isOpenMenu}" (click)="toggleDropdown()"></div>
+  <ul class="menu__list" #menuContent>
+    <app-menu-item class="menu__list__items"
+      *ngFor="let item of menuitens"
+      [optionPath]="item.optionPath"
+      [optionText]="item.optionText"
+    ></app-menu-item>
+  </ul>
+</nav>
