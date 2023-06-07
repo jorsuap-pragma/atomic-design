@@ -2,6 +2,7 @@ import { Component, ElementRef, HostListener, Input, OnInit, Renderer2, ViewChil
 import { MenuItemComponent } from '../../atoms/menu-item/menu-item.component';
 import { CommonModule } from '@angular/common';
 import { LogoComponent } from '../../atoms/logo/logo.component';
+import { Item } from '../../organisms/header/header.component';
 
 @Component({
   selector: 'app-menu',
@@ -22,7 +23,7 @@ export class MenuComponent implements OnInit {
     this.isOpenMenu = false;
   }
 
-  @Input() menuitens:any;
+  @Input() menuitens!:Item[];
   customClassMockups:string = 'icon-hamburger';
   urlImgIconHamburger:string = 'icon-hamburger.svg';
   isOpenMenu:boolean = false;
@@ -30,35 +31,11 @@ export class MenuComponent implements OnInit {
   constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
-
-    this.menuitens = [
-      {
-        optionPath:"/home",
-        optionText:"home"
-      },
-      {
-        optionPath:"/about",
-        optionText:"about"
-      },
-      {
-        optionPath:"/contact",
-        optionText:"contact"
-      },
-      {
-        optionPath:"/blog",
-        optionText:"blog"
-      },
-      {
-        optionPath:"/carries",
-        optionText:"carries"
-      },
-    ]
-  }
+  };
 
   toggleDropdown(){
    this.dropdownContent.nativeElement.classList.toggle('show-items-menu');
    this.isOpenMenu = !this.isOpenMenu;
+  };
 
-  }
-
-}
+};

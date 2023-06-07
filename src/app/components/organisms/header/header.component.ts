@@ -3,6 +3,10 @@ import { LogoComponent } from "../../atoms/logo/logo.component";
 import { MenuComponent } from '../../molecules/menu/menu.component';
 import { PrincipalBottonComponent } from '../../atoms/principal-botton/principal-botton.component';
 
+export interface Item {
+    optionPath:string,
+    optionText:string
+}
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
@@ -16,11 +20,9 @@ import { PrincipalBottonComponent } from '../../atoms/principal-botton/principal
 })
 export class HeaderComponent implements OnInit {
 
-  menuitens:any = [];
+  menuitens:Item[] = [];
   urlImg:string = "logo.svg";
   customClassHeader:string = 'header';
-
-  constructor() { }
 
   ngOnInit() {
 
