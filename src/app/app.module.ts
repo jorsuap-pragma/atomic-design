@@ -9,13 +9,17 @@ import { HomeComponent } from './components/templates/home/home.component';
 import { BannerComponent } from './components/organisms/banner/banner.component';
 import { ImagesBannerComponent } from './components/molecules/images-banner/images-banner.component';
 import { PrincipalBottonComponent } from './components/atoms/principal-botton/principal-botton.component';
+import { BenefitsComponent } from './components/molecules/benefits/benefits.component';
+import { BenefitsSectionComponent } from './components/organisms/benefits-section/benefits-section.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
         BannerComponent,
-        ImagesBannerComponent
+        ImagesBannerComponent,
+        BenefitsComponent,
+        BenefitsSectionComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
